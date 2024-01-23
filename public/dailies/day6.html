@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1 - Chamonix to Les Houches</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+        /* Add custom styles here if needed */
+
+        body {
+            padding-top: 56px; /* Adjust for the fixed navbar */
+        }
+
+        .feature-area {
+            text-align: center;
+            padding: 50px;
+            background-color: #f0f0f0;
+        }
+
+        .calendar-entry {
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .calendar-entry:hover {
+            background-color: #c0c0c0;
+        }
+
+        @media (min-width: 992px) {
+            /* Apply styles only on desktop and larger screens */
+            .right-menu {
+                position: fixed;
+                top: 56px; /* Adjust for the fixed navbar */
+                right: 0;
+                width: 25%;
+                padding: 20px;
+                background-color: #f8f9fa;
+                height: 100vh; /* Make the menu full height */
+                overflow-y: auto; /* Add scrollbar if needed */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top">
+        <a class="navbar-brand" href="/">TMB Travelogue</a>
+        <!-- Add your menu links here -->
+    </nav>
+
+    <div class="container-fluid pb-5">
+        <div class="row">
+            <div class="col-lg-9">
+                <!-- Feature Area -->
+                <div class="feature-area pb-4">
+                    <!-- Feature content specific to the day -->
+                    <h2>Day 1: Chamonix to Les Houches</h2>
+                    <p>Day begins with a cable car ride up Le Brevent ski area, then finishes with a grueling 1500m descent into Les Houches.</p>
+                    <!-- <img src="dayX-image.jpg" alt="Day X Image" class="img-fluid"> -->
+                </div>
+
+                <!-- 2-Column Table -->
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td><b>Starting point:</b> Pointe Isabelle Hotel - Chamonix (3,396 ft)</td>
+                            <td>Time: </td>
+                        </tr>
+                        <tr>
+                            <td><b>End point:</b> Hotel Campanules - Les Houches (3,307 ft)</td>
+                            <td>Time: </td>
+                        </tr>
+                        <tr>
+                            <td><b>Daily stats:</b> </td>
+                            <td>Distance: 13k | Height gain: +700m | Descent: -1500m</td>
+                        </tr>
+                        <tr>
+                            <td><b>Notable waypoint:</b> Planpraz cable car</td>
+                            <td>Time: </td>
+                        </tr>
+                        <tr>
+                            <td><b>Notable waypoint:</b> Refuge Bel Lachat</td>
+                            <td>Time: </td>
+                        </tr>
+                        <tr>
+                            <td><b>Effort level (1-10):</b> </td>
+                            <td>X</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>Trail Report:</h4>
+                <p class="pl-2">It all goes here.</p>
+            </div>
+
+        <!-- Right Menu for Individual Detail Pages (Hidden on Small Screens) -->
+        <div class="col-lg-3 d-none d-lg-block">
+            <!-- Include the All Entries sidebar using JavaScript -->
+            <div id="all-entries-sidebar"></div>
+            <script>
+                // Fetch and include the content of all_entries.html
+                fetch('all_entries.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('all-entries-sidebar').innerHTML = data;
+                    })
+                    .catch(error => console.error('Error fetching all_entries.html:', error));
+            </script>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
