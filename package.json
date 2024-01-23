@@ -3,7 +3,6 @@
     "express": "^4.18.2"
   },
   "scripts": {
-   "build": "npm run build"
-   "start": "server.js"
+    "start": "server.js"
   }
 }
