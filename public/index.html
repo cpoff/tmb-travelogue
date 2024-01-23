@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMB Travelogue</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+        /* Add custom styles here if needed */
+
+        body {
+            padding-top: 56px; /* Adjust for the fixed navbar */
+        }
+
+        /* Updated styles for the feature area */
+        .feature-area {
+            text-align: center;
+            padding: 0; /* Remove top padding */
+            margin: 0; /* Remove margin */
+            background-color: #f0f0f0;
+        }
+
+        .calendar-entry {
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .calendar-entry:hover {
+            background-color: #c0c0c0;
+        }
+
+        .card {
+            border-radius: 10px;
+        }
+
+        @media (min-width: 992px) {
+            /* Apply styles only on desktop and larger screens */
+            .right-menu {
+                position: fixed;
+                top: 56px; /* Adjust for the fixed navbar */
+                right: 0;
+                width: 25%;
+                padding: 20px;
+                background-color: #f8f9fa;
+                height: 100vh; /* Make the menu full height */
+                overflow-y: auto; /* Add scrollbar if needed */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top">
+        <a class="navbar-brand" href="#">TMB Travelogue</a>
+        <!-- Add your menu links here -->
+    </nav>
+
+    <div class="container-fluid pb-5">
+        <div class="row">
+            <div class="col-lg-9">
+                <!-- Feature Area -->
+                <div class="feature-area pb-2">
+                    <img src="img/TMB2.jpeg" alt="Feature Image" class="img-fluid mb-4">
+                    <h2>Tour du Mont Blanc - September 2024</h2>
+                    <p>I'll be walking the 110-mile loop around the Mont Blanc massif later this summer. Craig and Kara will join me, along with their neighbors. We're booking a guided trek so there will also be five additional in our group along with a guide.</p>
+                </div>
+
+                <!-- Calendar Entries -->
+                <div class="row mt-3">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card calendar-entry" onmouseover="showDetail('day1')" onclick="window.location.href='dailies/day1.html'">
+                            <div class="card-body">
+                                <h5 class="card-title">Day 1</h5>
+                                <p>Chamonix to Les Houches</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card calendar-entry" onmouseover="showDetail('day2')" onclick="window.location.href='dailies/day2.html'">
+                            <div class="card-body">
+                                <h5 class="card-title">Day 2</h5>
+                                <p>Les Houches to Les Contamines</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card calendar-entry" onmouseover="showDetail('day3')" onclick="window.location.href='dailies/day3.html'">
+                            <div class="card-body">
+                                <h5 class="card-title">Day 3</h5>
+                                <p>Les Contamines to Les Chapieux</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card calendar-entry" onmouseover="showDetail('day4')" onclick="window.location.href='dailies/day4.html'">
+                            <div class="card-body">
+                                <h5 class="card-title">Day 4</h5>
+                                <p>Les Chapieux to Courmayeur</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card calendar-entry" onmouseover="showDetail('day5')" onclick="window.location.href='dailies/day5.html'">
+                            <div class="card-body">
+                                <h5 class="card-title">Day 5</h5>
+                                <p>Rest day!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card calendar-entry" onmouseover="showDetail('day6')" onclick="window.location.href='dailies/day6.html'">
+                            <div class="card-body">
+                                <h5 class="card-title">Day 6</h5>
+                                <p>Courmayeur to Lavachey</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add entries for the remaining days -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card calendar-entry" onmouseover="showDetail('day7')" onclick="window.location.href='dailies/day7.html'">
+                            <div class="card-body">
+                                <h5 class="card-title">Day 7</h5>
+                                <p>Lavachey to Col de Fenêtre</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card calendar-entry" onmouseover="showDetail('day8')" onclick="window.location.href='dailies/day8.html'">
+                            <div class="card-body">
+                                <h5 class="card-title">Day 8</h5>
+                                <p>Col de Fenêtre to Champex Lac</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card calendar-entry" onmouseover="showDetail('day9')" onclick="window.location.href='dailies/day9.html'">
+                            <div class="card-body">
+                                <h5 class="card-title">Day 9</h5>
+                                <p>Champex Lac to Trient</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card calendar-entry" onmouseover="showDetail('day10')" onclick="window.location.href='dailies/day10.html'">
+                            <div class="card-body">
+                                <h5 class="card-title">Day 10</h5>
+                                <p>Trient to Argentiere</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card calendar-entry" onmouseover="showDetail('day11')" onclick="window.location.href='dailies/day11.html'">
+                            <div class="card-body">
+                                <h5 class="card-title">Day 11</h5>
+                                <p>Argentiere to Chamonix</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Menu for Individual Detail Pages (Hidden on Small Screens) -->
+            <div class="col-lg-3 d-none d-lg-block">
+                <div class="right-menu">
+                    <h2>All Entries</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="dailies/day1.html">Day 1</a></li>
+                        <li class="list-group-item"><a href="dailies/day2.html">Day 2</a></li>
+                        <li class="list-group-item"><a href="dailies/day3.html">Day 3</a></li>
+                        <li class="list-group-item"><a href="dailies/day4.html">Day 4</a></li>
+                        <li class="list-group-item"><a href="dailies/day5.html">Day 5</a></li>
+                        <li class="list-group-item"><a href="dailies/day6.html">Day 6</a></li>
+                        <li class="list-group-item"><a href="dailies/day7.html">Day 7</a></li>
+                        <li class="list-group-item"><a href="dailies/day8.html">Day 8</a></li>
+                        <li class="list-group-item"><a href="dailies/day9.html">Day 9</a></li>
+                        <li class="list-group-item"><a href="dailies/day10.html">Day 10</a></li>
+                        <li class="list-group-item"><a href="dailies/day11.html">Day 11</a></li>
+                        <!-- Add links for the remaining days -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        function showDetail(day) {
+            // You can implement logic to display additional details on mouseover if needed
+            console.log(`Showing details for ${day}`);
+        }
+    </script>
+
+</body>
+
+</html>
